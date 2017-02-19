@@ -18,5 +18,5 @@ $loader = require __DIR__.'/../app/autoload.php';
 Debug::enable();
 
 $application = new Application('DEV TOOLS', 'v1.0.0');
+$application->add(new SymfonyTestCommand());
 $application->run();
-

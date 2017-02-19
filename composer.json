@@ -2,6 +2,13 @@
     "name": "hittten/dev-tools",
     "description": "Developer tools for manage web projects and work better with vagrant, php and ubuntu",
     "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gilberto López Ambrosino",
+            "email": "gilberto.amb@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "": "src/"
@@ -11,12 +18,16 @@
         "symfony/console": "^3.2",
         "symfony/process": "^3.2"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Gilberto López Ambrosino",
-            "email": "gilberto.amb@gmail.com"
-        }
-    ]
+    "scripts": {
+        "hittten-scripts": [
+            "Hittten\\Composer\\ScriptHandler::bashInstall"
+        ],
+        "post-install-cmd": [
+            "@hittten-scripts"
+        ],
+        "post-update-cmd": [
+            "@hittten-scripts"
+        ]
+    }
 }
 

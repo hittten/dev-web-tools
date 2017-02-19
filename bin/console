@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use Hittten\Command\PhpXdebugCommand;
 use Hittten\Command\SymfonyTestCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Debug\Debug;
@@ -19,4 +20,5 @@ Debug::enable();
 
 $application = new Application('DEV TOOLS', 'v1.0.0');
 $application->add(new SymfonyTestCommand());
+$application->add(new PhpXdebugCommand());
 $application->run();

@@ -1,0 +1,22 @@
+{
+    "name": "hittten/dev-tools",
+    "description": "Developer tools for manage web projects and work better with vagrant, php and ubuntu",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "^3.2",
+        "symfony/process": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gilberto López Ambrosino",
+            "email": "gilberto.amb@gmail.com"
+        }
+    ]
+}
+
